@@ -7,27 +7,27 @@ public class HoOh extends Monster{
 
 
         if (level == 1){
-            MHp = 1000;
+            MHp = 500;
         }else if(level == 2){
-            MHp = 1500;
+            MHp = 700;
         }else if(level == 3){
-            MHp = 2000;
+            MHp = 900;
         }
 
         if (level == 1){
-            MProbability = 20;
+            MProbability = 60;
         }else if(level == 2){
-            MProbability = 25;
+            MProbability = 65;
         }else if(level == 3){
-            MProbability = 30;
+            MProbability = 70;
         }
 
         if (level == 1){
-            MDmg = 200;
+            MDmg = 50;
         }else if(level == 2){
-            MDmg = 250;
+            MDmg = 100;
         }else if(level == 3){
-            MDmg = 300;
+            MDmg = 120;
         }
 
     }

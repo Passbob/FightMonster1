@@ -7,27 +7,27 @@ public class Vampire extends Monster{
 
 
         if (level == 1){
-            MHp = 1000;
+            MHp = 350;
         }else if(level == 2){
-            MHp = 1500;
+            MHp = 350;
         }else if(level == 3){
-            MHp = 2000;
+            MHp = 350;
         }
 
         if (level == 1){
-            MProbability = 20;
+            MProbability = 70;
         }else if(level == 2){
-            MProbability = 25;
+            MProbability = 75;
         }else if(level == 3){
-            MProbability = 30;
+            MProbability = 80;
         }
 
         if (level == 1){
-            MDmg = 100;
+            MDmg = 50;
         }else if(level == 2){
-            MDmg = 250;
+            MDmg = 70;
         }else if(level == 3){
-            MDmg = 300;
+            MDmg = 90;
         }
 
     }

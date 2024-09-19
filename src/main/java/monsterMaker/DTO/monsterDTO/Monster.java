@@ -9,7 +9,7 @@ public abstract class Monster {
     public Monster(){}
 
     public String appearance() {
-        return MName + "이 등장했습니다. {체력=" + MHp +
+        return MName + "(이)가 등장했습니다. {체력=" + MHp +
                 ", 데미지=" + MDmg +
                 ", 공격확률=" + MProbability +
                 '}';

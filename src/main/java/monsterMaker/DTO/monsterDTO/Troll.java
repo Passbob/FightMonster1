@@ -19,7 +19,7 @@ public class Troll extends Monster{
         }else if(level == 2){
             MProbability = 25;
         }else if(level == 3){
-            MProbability = 30;
+            MProbability = 35;
         }
 
         if (level == 1){

@@ -6,17 +6,22 @@ import monsterMaker.DTO.monsterDTO.Vampire;
 
 import java.util.Scanner;
 
-public class FightVampire {
+public class FightVampire{
     Vampire vampire = new Vampire();
     WarriorInfo warrior = new WarriorInfo();
     Scanner sc = new Scanner(System.in);
+    private static int retire=1;
 
 
     public void startFight(){
         vampire.setVampire(Level.getLevel());
         warrior.setWarriorHp(Level.getLevel());
         System.out.println("마을에 도착하기 전 폐허에서 웃음소리가 들립니다!!");
+        System.out.println(" (；☉_☉)      (≖⑉≖├┬┴┬┴ ");
+        System.out.println();
         System.out.println("위험을 지나치면 용사가 아니죠!");
+        System.out.println(" (૭ ఠ༬ఠ)૭     (૭ ఠ༬ఠ)૭ ");
+        System.out.println();
         System.out.println("아무키나 입력하고 전투를 시작하세요");
         sc.nextLine();
         System.out.println(vampire.appearance());
@@ -26,7 +31,11 @@ public class FightVampire {
             System.out.println("sword , bow, garlic");
             System.out.print("공격할 장비를 입력해주세요 : ");
             monsterHp -= warriorEquipmentForVampire(sc.nextLine());
+            System.out.println();
             System.out.println(vampire.getMName() + " HP : " + monsterHp);
+            if (monsterHp <= 0) {
+                break;
+            }
             System.out.println();
             int vamA = getVampireAttack();
             warriorHp -= vamA;
@@ -34,9 +43,10 @@ public class FightVampire {
             System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
             System.out.println(vampire.getMName() + "가 " + vamA/2 +"만큼 흡혈을 합니다!!");
             System.out.println(vampire.getMName() + " HP : " + monsterHp);
-            if (monsterHp <= 0) {
-                break;
-            } else if (warriorHp <= 0) {
+            System.out.println();
+            System.out.println();
+            if (warriorHp <= 0) {
+                FightVampire.retire = 0;
                 break;
             }
         }
@@ -58,7 +68,7 @@ public class FightVampire {
             System.out.println("활이 통하지 않습니다!!!!!!!");
 
 
-        } if (equipment.equals("garlic")){
+        }else if (equipment.equals("garlic")){
             if(random <=8){
                 warriorDmg = (int)(Math.random()*50)+100;
                 System.out.println("뱀파이어가 마늘냄새를 맡고 괴로워합니다.");
@@ -66,6 +76,9 @@ public class FightVampire {
                 System.out.println("뱀파이어가 코를 막았습니다.");
             }
 
+        }else{
+            warriorDmg = 0;
+            System.out.println("잘못 입력하셨습니다.");
         }
         return warriorDmg;
     }
@@ -84,5 +97,10 @@ public class FightVampire {
         }
 
         return vampireDmg;
+    }
+
+
+    public static int getRetire() {
+        return retire;
     }
 }

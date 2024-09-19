@@ -13,13 +13,13 @@ public class Fight {
 
 
     public void fightStart(){
-
-        //        int M = (int)(Math.random()*3+1);
-        int M = 2;
+        int M = (int)(Math.random()*3+1);
         if(M == 1){
             troll.startFight();
         }else if(M == 2){
             vampire.startFight();
+        }else if(M == 3){
+            hoOh.startFight();
         }
 
 

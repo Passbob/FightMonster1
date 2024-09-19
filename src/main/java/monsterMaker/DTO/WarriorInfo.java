@@ -1,7 +1,7 @@
 package monsterMaker.DTO;
 
 public class WarriorInfo {
-    private String warriorName;
+    private static String warriorName;
     private int warriorHp;
 
     public String getWarriorName() {
