@@ -16,7 +16,6 @@ public class FightHoOh{
     public void startFight(){
         hoOh.setHoOh(Level.getLevel());
         warrior.setWarriorHp(Level.getLevel());
-        warrior.setWarriorHp(Level.getLevel());
         System.out.println("숲 속에서 알을 발견해서 계란후라이를 해먹었습니다!");
         System.out.println("ฅ(՞៸៸> ᗜ < ៸៸՞)ฅ");
         System.out.println();
