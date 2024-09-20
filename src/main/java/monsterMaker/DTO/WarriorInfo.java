@@ -9,7 +9,7 @@ public class WarriorInfo {
     }
 
     public void setWarriorName(String warriorName) {
-        this.warriorName = warriorName;
+        WarriorInfo.warriorName = warriorName;
     }
 
     public int getWarriorHp() {
