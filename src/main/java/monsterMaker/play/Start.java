@@ -31,8 +31,6 @@ public class Start {
             System.out.println();
             System.out.println(warrior.getWarriorName() + "은(는) 모험을 떠납니다.");
             System.out.println();
-            System.out.println();
-            System.out.println();
             for (int i = 0; i <= 2; i++) {
                 fight.fightStart();
                 if(FightHoOh.getRetire() == 0 || FightTroll.getRetire() == 0 || FightVampire.getRetire() == 0){
@@ -40,8 +38,11 @@ public class Start {
                     break;
                 }
                 if (i < 2) {
+                    System.out.println();
                     System.out.println("전투가 끝나고 마을에서 휴식합니다.");
                     System.out.println(warrior.getWarriorName() + "의 체력이 모두 회복됩니다.");
+                    System.out.println();
+                    System.out.println();
                     System.out.print("모험을 다시 시작하시려면 아무 키나 입력해주세요 : ");
                     sc.nextLine();
                     System.out.println();
@@ -49,6 +50,7 @@ public class Start {
                     System.out.println();
                     System.out.println();
                     System.out.println(warrior.getWarriorName() + "가 다시 모험을 떠납니다.");
+                    System.out.println();
                 }
                 else {
                     System.out.println();

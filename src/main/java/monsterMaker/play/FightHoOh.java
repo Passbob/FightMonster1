@@ -25,23 +25,34 @@ public class FightHoOh{
         System.out.println("위험을 지나치면 용사가 아니죠!");
         System.out.println(" ༼ง ◉_◉༽ง        ༼ง ◉_◉༽ง ");
         System.out.println();
-        System.out.println("아무키나 입력하고 전투를 시작하세요");
+        System.out.print("아무키나 입력하고 전투를 시작하세요 : ");
         sc.nextLine();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println(hoOh.appearance());
+        System.out.println();
+        System.out.println();
         int hoOhHp = hoOh.getMHp();
         int warriorHp = warrior.getWarriorHp();
         for (int i = 0; i < 100; i++) {
-            System.out.println("sword , bow, garlic");
+            System.out.println();
+            System.out.println("===sword , bow, garlic===");
+            System.out.println();
             System.out.print("공격할 장비를 입력해주세요 : ");
             hoOhHp -= warriorEquipmentForHoOh(sc.nextLine());
-            System.out.println();
             if(hoOhHp < 0){
                 hoOhHp = 0;
             }
             System.out.println("칠색조 HP : " + hoOhHp);
             if (hoOhHp == 0) {
+                System.out.println("칠색조가 쓰러졌습니다!!");
+                System.out.println();
+                System.out.println();
                 break;
             }
+            System.out.println();
             System.out.println();
             warriorHp -= getHoOhAttack();
             if(warriorHp < 0){
@@ -50,7 +61,7 @@ public class FightHoOh{
             System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
             System.out.println();
             System.out.println();
-            if (warriorHp <= 0) {
+            if (warriorHp == 0) {
                 FightHoOh.retire = 0;
                 break;
             }
