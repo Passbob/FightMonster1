@@ -15,9 +15,6 @@ public class Start {
         WarriorInfo warrior = new WarriorInfo();
         Level levelC = new Level();
         Fight fight = new Fight();
-        FightHoOh hoOh = new FightHoOh();
-        FightTroll troll = new FightTroll();
-        FightVampire vampire = new FightVampire();
 
         System.out.print("모험을 시작하시려면 아무 키나 입력해주세요 : ");
         sc.nextLine();
