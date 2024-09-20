@@ -35,12 +35,18 @@ public class FightTroll{
             System.out.print("공격할 장비를 입력해주세요 : ");
             trollHp -= warriorEquipmentForTroll(sc.nextLine());
             System.out.println();
+            if(trollHp < 0){
+                trollHp = 0;
+            }
             System.out.println("트롤 HP : " + trollHp);
-            if (trollHp <= 0) {
+            if (trollHp == 0) {
                 break;
             }
             System.out.println();
             warriorHp -= getTrollAttack();
+            if(warriorHp < 0){
+                warriorHp = 0;
+            }
             System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
             System.out.println();
             System.out.println();

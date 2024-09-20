@@ -28,19 +28,25 @@ public class FightHoOh{
         System.out.println("아무키나 입력하고 전투를 시작하세요");
         sc.nextLine();
         System.out.println(hoOh.appearance());
-        int trollHp = hoOh.getMHp();
+        int hoOhHp = hoOh.getMHp();
         int warriorHp = warrior.getWarriorHp();
         for (int i = 0; i < 100; i++) {
             System.out.println("sword , bow, garlic");
             System.out.print("공격할 장비를 입력해주세요 : ");
-            trollHp -= warriorEquipmentForHoOh(sc.nextLine());
+            hoOhHp -= warriorEquipmentForHoOh(sc.nextLine());
             System.out.println();
-            System.out.println("칠색조 HP : " + trollHp);
-            if (trollHp <= 0) {
+            if(hoOhHp < 0){
+                hoOhHp = 0;
+            }
+            System.out.println("칠색조 HP : " + hoOhHp);
+            if (hoOhHp == 0) {
                 break;
             }
             System.out.println();
             warriorHp -= getHoOhAttack();
+            if(warriorHp < 0){
+                warriorHp = 0;
+            }
             System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
             System.out.println();
             System.out.println();

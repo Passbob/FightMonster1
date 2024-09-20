@@ -32,20 +32,26 @@ public class FightVampire{
             System.out.print("공격할 장비를 입력해주세요 : ");
             monsterHp -= warriorEquipmentForVampire(sc.nextLine());
             System.out.println();
+            if(monsterHp < 0){
+                monsterHp = 0;
+            }
             System.out.println(vampire.getMName() + " HP : " + monsterHp);
-            if (monsterHp <= 0) {
+            if (monsterHp == 0) {
                 break;
             }
             System.out.println();
             int vamA = getVampireAttack();
             warriorHp -= vamA;
             monsterHp += vamA/2;
+            if(warriorHp < 0){
+                warriorHp = 0;
+            }
             System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
             System.out.println(vampire.getMName() + "가 " + vamA/2 +"만큼 흡혈을 합니다!!");
             System.out.println(vampire.getMName() + " HP : " + monsterHp);
             System.out.println();
             System.out.println();
-            if (warriorHp <= 0) {
+            if (warriorHp == 0) {
                 FightVampire.retire = 0;
                 break;
             }
