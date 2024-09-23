@@ -1,15 +1,12 @@
 package monsterMaker.play;
 
-import monsterMaker.DTO.monsterDTO.HoOh;
-import monsterMaker.DTO.monsterDTO.Monster;
-import monsterMaker.DTO.monsterDTO.Troll;
-import monsterMaker.DTO.monsterDTO.Vampire;
+import monsterMaker.dto.Monster;
 
 public class Fight {
 
-    FightHoOh hoOh = new FightHoOh();
-    FightTroll troll = new FightTroll();
-    FightVampire vampire = new FightVampire();
+    Monster hoOh = new HoOh();
+    Monster troll = new Troll();
+    Monster vampire = new Vampire();
 
 
     public void fightStart(){

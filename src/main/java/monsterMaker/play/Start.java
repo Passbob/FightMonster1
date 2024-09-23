@@ -1,11 +1,8 @@
 package monsterMaker.play;
 
 import java.util.Scanner;
-import monsterMaker.DTO.WarriorInfo;
-import monsterMaker.DTO.Level;
-import monsterMaker.DTO.monsterDTO.HoOh;
-import monsterMaker.DTO.monsterDTO.Troll;
-import monsterMaker.DTO.monsterDTO.Vampire;
+import monsterMaker.dto.WarriorInfo;
+import monsterMaker.dto.Level;
 
 public class Start {
 
@@ -24,7 +21,7 @@ public class Start {
         warrior.setWarriorName(sc.nextLine());
         System.out.println("=======난이도를 입력해주세요======");
         System.out.println("======easy , normal, hard======");
-        levelC.levelChoice(sc.nextLine());
+        levelC.setLevel(sc.nextLine());
         if(Level.getLevel() != 1 && Level.getLevel() != 2 && Level.getLevel() != 3){
             System.out.println("다시 시작해주세요");
         }else {
@@ -33,7 +30,7 @@ public class Start {
             System.out.println();
             for (int i = 0; i <= 2; i++) {
                 fight.fightStart();
-                if(FightHoOh.getRetire() == 0 || FightTroll.getRetire() == 0 || FightVampire.getRetire() == 0){
+                if(WarriorInfo.getRetire() == 0){
                     System.out.println("용사가 쓰러졌습니다.");
                     break;
                 }

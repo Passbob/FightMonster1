@@ -1,4 +1,4 @@
-package monsterMaker.DTO.monsterDTO;
+package monsterMaker.dto;
 
 public abstract class Monster {
     String MName;
@@ -8,6 +8,13 @@ public abstract class Monster {
 
     public Monster(){}
 
+    public Monster(String MName, int MHp, int MDmg, int MProbability) {
+        this.MName = MName;
+        this.MHp = MHp;
+        this.MDmg = MDmg;
+        this.MProbability = MProbability;
+    }
+
     public String appearance() {
         return MName + "(이)가 등장했습니다. {체력=" + MHp +
                 ", 데미지=" + MDmg +
@@ -15,6 +22,8 @@ public abstract class Monster {
                 '}';
 
     }
+
+    public void startFight(){}
 
     public String getMName() {
         return MName;

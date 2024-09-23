@@ -1,8 +1,12 @@
-package monsterMaker.DTO;
+package monsterMaker.dto;
 
 public class WarriorInfo {
     private static String warriorName;
     private int warriorHp;
+    private static int retire =1;
+
+
+    public WarriorInfo(){}
 
     public String getWarriorName() {
         return warriorName;
@@ -27,4 +31,11 @@ public class WarriorInfo {
 
     }
 
+    public static int getRetire() {
+        return retire;
+    }
+
+    public static void setRetire(int retire) {
+        WarriorInfo.retire = retire;
+    }
 }

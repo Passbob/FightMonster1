@@ -1,8 +1,11 @@
-package monsterMaker.DTO;
+package monsterMaker.dto;
 
 public class Level {
     private static int level;
-    public void levelChoice(String choice){
+
+    public Level() {}
+
+    public void setLevel(String choice){
 
         if(choice.equals("easy")){
             level = 1;
@@ -17,6 +20,7 @@ public class Level {
     }
 
     public static int getLevel() {
+
         return Level.level;
     }
 }

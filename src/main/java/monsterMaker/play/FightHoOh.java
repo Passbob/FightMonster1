@@ -1,76 +1,15 @@
 package monsterMaker.play;
 
-import monsterMaker.DTO.Level;
-import monsterMaker.DTO.WarriorInfo;
-import monsterMaker.DTO.monsterDTO.HoOh;
+import monsterMaker.dto.Monster;
+import monsterMaker.dto.WarriorInfo;
 
 import java.util.Scanner;
 
 public class FightHoOh{
 
-    HoOh hoOh = new HoOh();
+    Monster hoOh = new HoOh();
     WarriorInfo warrior = new WarriorInfo();
     Scanner sc = new Scanner(System.in);
-    private static int retire =1;
-
-    public void startFight(){
-        hoOh.setHoOh(Level.getLevel());
-        warrior.setWarriorHp(Level.getLevel());
-        System.out.println("숲 속에서 알을 발견해서 계란후라이를 해먹었습니다!");
-        System.out.println("ฅ(՞៸៸> ᗜ < ៸៸՞)ฅ");
-        System.out.println();
-        System.out.println("한 입에 먹은 순간 상공에서 엄청난 괴음이 들려옵니다!!!");
-        System.out.println(" (；◔д◔）       (ʘ言ʘ╬) ");
-        System.out.println();
-        System.out.println("위험을 지나치면 용사가 아니죠!");
-        System.out.println(" ༼ง ◉_◉༽ง        ༼ง ◉_◉༽ง ");
-        System.out.println();
-        System.out.print("아무키나 입력하고 전투를 시작하세요 : ");
-        sc.nextLine();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println(hoOh.appearance());
-        System.out.println();
-        System.out.println();
-        int hoOhHp = hoOh.getMHp();
-        int warriorHp = warrior.getWarriorHp();
-        for (int i = 0; i < 100; i++) {
-            System.out.println();
-            System.out.println("===sword , bow, garlic===");
-            System.out.println();
-            System.out.print("공격할 장비를 입력해주세요 : ");
-            hoOhHp -= warriorEquipmentForHoOh(sc.nextLine());
-            if(hoOhHp < 0){
-                hoOhHp = 0;
-            }
-            System.out.println("칠색조 HP : " + hoOhHp);
-            if (hoOhHp == 0) {
-                System.out.println("칠색조가 쓰러졌습니다!!");
-                System.out.println();
-                System.out.println();
-                break;
-            }
-            System.out.println();
-            System.out.println();
-            warriorHp -= getHoOhAttack();
-            if(warriorHp < 0){
-                warriorHp = 0;
-            }
-            System.out.println(warrior.getWarriorName() + "의 남은 HP : " + warriorHp);
-            System.out.println();
-            System.out.println();
-            if (warriorHp == 0) {
-                FightHoOh.retire = 0;
-                break;
-            }
-        }
-        System.out.println("숲을 떠납니다.");
-    }
-
-
-
 
     public int warriorEquipmentForHoOh (String equipment) {
         int warriorDmg = 0;
@@ -121,7 +60,5 @@ public class FightHoOh{
         return hoOhDmg;
     }
 
-    public static int getRetire() {
-        return retire;
-    }
+
 }
